@@ -1,0 +1,42 @@
+name: Update star history charts
+
+on:
+  schedule:
+    - cron: "0 21 * * *" # 毎日 06:00 JST。毎時にするなら "0 * * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - repos.txt
+      - generate_star_history.py
+      - .github/workflows/update.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-charts
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate charts
+        env:
+          GH_TOKEN: ${{ secrets.STAR_HISTORY_TOKEN }}
+        run: python3 generate_star_history.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add charts data
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Update star history charts"
+            git push
+          fi

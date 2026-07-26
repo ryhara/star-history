@@ -1,0 +1,2 @@
+# 1行に1リポジトリ (owner/repo)。トークンのオーナーが管理者/コラボレーターである必要あり
+ryhara/hand_visibility_detector
