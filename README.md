@@ -9,10 +9,15 @@ GitHub が [2026-06-30 に stargazers API をオーナー/コラボレーター�
 
 ## チャート
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ryhara/star-history/main/charts/ryhara_hand_visibility_detector_dark.svg">
-  <img alt="Star history of ryhara/hand_visibility_detector" src="https://raw.githubusercontent.com/ryhara/star-history/main/charts/ryhara_hand_visibility_detector.svg">
-</picture>
+<p>
+  <img alt="Star history of ryhara/hand_visibility_detector (light)" src="https://raw.githubusercontent.com/ryhara/star-history/main/charts/ryhara_hand_visibility_detector.svg" width="49%">
+  <img alt="Star history of ryhara/hand_visibility_detector (dark)" src="https://raw.githubusercontent.com/ryhara/star-history/main/charts/ryhara_hand_visibility_detector_dark.svg" width="49%">
+</p>
+
+<p>
+  <img alt="Star history of ryhara/hamer-mini (light)" src="https://raw.githubusercontent.com/ryhara/star-history/main/charts/ryhara_hamer-mini.svg" width="49%">
+  <img alt="Star history of ryhara/hamer-mini (dark)" src="https://raw.githubusercontent.com/ryhara/star-history/main/charts/ryhara_hamer-mini_dark.svg" width="49%">
+</p>
 
 ## 使い方
 
