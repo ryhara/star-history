@@ -23,11 +23,20 @@ GitHub が [2026-06-30 に stargazers API をオーナー/コラボレーター�
 
 ### 1. トークンを登録する
 
-fine-grained PAT（対象リポジトリに対して **Metadata: Read-only** があれば十分）を、このリポジトリの Secret `STAR_HISTORY_TOKEN` に登録する:
+[Fine-grained PAT](https://github.com/settings/personal-access-tokens) を次の設定で作成する:
+
+- **Repository access**: "Only select repositories" で対象リポジトリをすべて選択（複数リポジトリを 1 つのトークンでカバーできる）
+- **Repository permissions**:
+  - **Metadata: Read-only**（リポジトリ選択時に自動付与）
+  - **Contents: Read and write** ← 必須。2026-06 の制限以降、stargazers API は `metadata=read; contents=write` を要求する（403 時の `x-accepted-github-permissions` ヘッダーで確認可能）。write 権限が「オーナー/コラボレーターであること」の証明として使われるため、Read-only では不十分
+
+作成したトークンを、このリポジトリの Secret `STAR_HISTORY_TOKEN` に登録する:
 
 ```bash
 gh secret set STAR_HISTORY_TOKEN -R ryhara/star-history
 ```
+
+対象リポジトリを後から増やす場合は、トークンの Edit 画面で Repository access に追加するだけでよい（トークン値は変わらないので Secret の更新は不要）。
 
 ### 2. 対象リポジトリを追加する
 

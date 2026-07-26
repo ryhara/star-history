@@ -72,10 +72,15 @@ def fetch_star_dates(repo: str, token: str) -> list[datetime]:
             items, link = gh_get(url, token)
         except urllib.error.HTTPError as e:
             if e.code in (401, 403, 404):
+                try:
+                    body = e.read().decode("utf-8", "replace")
+                except Exception:
+                    body = "(no body)"
                 raise SystemExit(
                     f"error: cannot read stargazers of {repo} (HTTP {e.code}). "
                     "The token must belong to an owner/collaborator of the repo "
-                    "(fine-grained PAT with Metadata: read)."
+                    "(fine-grained PAT with Metadata: read + Contents: read and write).\n"
+                    f"API response: {body}"
                 )
             raise
         for item in items:
