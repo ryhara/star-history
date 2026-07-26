@@ -9,12 +9,12 @@ GitHub が [2026-06-30 に stargazers API をオーナー/コラボレーター�
 
 ## チャート
 
-<p>
+<p align="center">
   <img alt="Star history of ryhara/hand_visibility_detector (light)" src="https://raw.githubusercontent.com/ryhara/star-history/main/charts/ryhara_hand_visibility_detector.svg" width="49%">
   <img alt="Star history of ryhara/hand_visibility_detector (dark)" src="https://raw.githubusercontent.com/ryhara/star-history/main/charts/ryhara_hand_visibility_detector_dark.svg" width="49%">
 </p>
 
-<p>
+<p align="center">
   <img alt="Star history of ryhara/hamer-mini (light)" src="https://raw.githubusercontent.com/ryhara/star-history/main/charts/ryhara_hamer-mini.svg" width="49%">
   <img alt="Star history of ryhara/hamer-mini (dark)" src="https://raw.githubusercontent.com/ryhara/star-history/main/charts/ryhara_hamer-mini_dark.svg" width="49%">
 </p>
@@ -45,10 +45,12 @@ gh secret set STAR_HISTORY_TOKEN -R ryhara/star-history
 ### 3. README に埋め込む
 
 ```html
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ryhara/star-history/main/charts/{owner}_{repo}_dark.svg">
-  <img alt="Star History" src="https://raw.githubusercontent.com/ryhara/star-history/main/charts/{owner}_{repo}.svg">
-</picture>
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ryhara/star-history/main/charts/{owner}_{repo}_dark.svg">
+    <img alt="Star History" src="https://raw.githubusercontent.com/ryhara/star-history/main/charts/{owner}_{repo}.svg">
+  </picture>
+</p>
 ```
 
 ### 手動実行・ローカル実行
