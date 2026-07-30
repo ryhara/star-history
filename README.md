@@ -1,13 +1,15 @@
 # star-history
 
-GitHub が [2026-06-30 に stargazers API をオーナー/コラボレーター限定に制限](https://github.blog/changelog/2026-06-30-upcoming-access-restrictions-to-public-api-endpoints-and-ui-views/)したため、star-history.com の README 埋め込みチャートが機能しなくなった。このリポジトリはその代替として、自分のリポジトリのスター履歴チャートを GitHub Actions で定期生成し、静的 SVG として配信する。
+English | [日本語](README_ja.md)
 
-- 毎日 06:00 JST（cron）にオーナーの fine-grained PAT でスター履歴を取得
-- `charts/` にライト/ダークテーマの SVG を生成してコミット
-- 各リポジトリの README は `raw.githubusercontent.com` の固定 URL を参照するだけなので、README 側の更新は不要
-- 依存ライブラリなし（Python 標準ライブラリのみ）。スターを付けたユーザーの情報は保存せず、日時のみ記録
+GitHub [restricted the stargazers API to owners/collaborators on 2026-06-30](https://github.blog/changelog/2026-06-30-upcoming-access-restrictions-to-public-api-endpoints-and-ui-views/), which broke the README-embedded charts from star-history.com. This repository is a replacement: it periodically generates star history charts for your own repositories via GitHub Actions and serves them as static SVGs.
 
-## チャート
+- Fetches star history daily at 06:00 JST (cron) using the owner's fine-grained PAT
+- Generates light/dark theme SVGs in `charts/` and commits them
+- Each repository's README only references a fixed `raw.githubusercontent.com` URL, so no README updates are needed
+- No dependencies (Python standard library only). Does not store any information about who starred — only timestamps
+
+## Charts
 
 <p align="center">
   <img alt="Star history of ryhara/hand_visibility_detector (light)" src="https://raw.githubusercontent.com/ryhara/star-history/main/charts/ryhara_hand_visibility_detector.svg" width="49%">
@@ -19,30 +21,30 @@ GitHub が [2026-06-30 に stargazers API をオーナー/コラボレーター�
   <img alt="Star history of ryhara/hamer-mini (dark)" src="https://raw.githubusercontent.com/ryhara/star-history/main/charts/ryhara_hamer-mini_dark.svg" width="49%">
 </p>
 
-## 使い方
+## Usage
 
-### 1. トークンを登録する
+### 1. Register a token
 
-[Fine-grained PAT](https://github.com/settings/personal-access-tokens) を次の設定で作成する:
+Create a [fine-grained PAT](https://github.com/settings/personal-access-tokens) with the following settings:
 
-- **Repository access**: "Only select repositories" で対象リポジトリをすべて選択（複数リポジトリを 1 つのトークンでカバーできる）
+- **Repository access**: "Only select repositories" and select all target repositories (a single token can cover multiple repositories)
 - **Repository permissions**:
-  - **Metadata: Read-only**（リポジトリ選択時に自動付与）
-  - **Contents: Read and write** ← 必須。2026-06 の制限以降、stargazers API は `metadata=read; contents=write` を要求する（403 時の `x-accepted-github-permissions` ヘッダーで確認可能）。write 権限が「オーナー/コラボレーターであること」の証明として使われるため、Read-only では不十分
+  - **Metadata: Read-only** (granted automatically when repositories are selected)
+  - **Contents: Read and write** ← Required. Since the 2026-06 restriction, the stargazers API requires `metadata=read; contents=write` (verifiable via the `x-accepted-github-permissions` header on a 403 response). The write permission is used as proof of being an owner/collaborator, so Read-only is not sufficient
 
-作成したトークンを、このリポジトリの Secret `STAR_HISTORY_TOKEN` に登録する:
+Register the created token as the Secret `STAR_HISTORY_TOKEN` in this repository:
 
 ```bash
 gh secret set STAR_HISTORY_TOKEN -R ryhara/star-history
 ```
 
-対象リポジトリを後から増やす場合は、トークンの Edit 画面で Repository access に追加するだけでよい（トークン値は変わらないので Secret の更新は不要）。
+To add more target repositories later, just add them to the token's Repository access on its Edit page (the token value doesn't change, so no Secret update is needed).
 
-### 2. 対象リポジトリを追加する
+### 2. Add target repositories
 
-`repos.txt` に 1 行 1 リポジトリで書く。push すると即座にチャートが再生成される。
+List one repository per line in `repos.txt`. Charts are regenerated immediately on push.
 
-### 3. README に埋め込む
+### 3. Embed in a README
 
 ```html
 <p align="center">
@@ -53,15 +55,15 @@ gh secret set STAR_HISTORY_TOKEN -R ryhara/star-history
 </p>
 ```
 
-### 手動実行・ローカル実行
+### Manual / local runs
 
 ```bash
-gh workflow run update.yml -R ryhara/star-history   # 手動トリガー
-GH_TOKEN=$(gh auth token) python3 generate_star_history.py  # ローカル
+gh workflow run update.yml -R ryhara/star-history   # manual trigger
+GH_TOKEN=$(gh auth token) python3 generate_star_history.py  # local
 ```
 
-## 注意
+## Notes
 
-- スター **数** の推移のみを公開する。誰がスターしたか（GitHub が制限したデータ）は保存・公開しない
-- fine-grained PAT には有効期限があるため、失効したら Secret を更新する
-- リポジトリが 60 日間無活動だと scheduled workflow は自動停止する（このリポジトリはチャート更新コミットで活動が続くため実質問題にならない）
+- Only the star **count** over time is published. Who starred (the data GitHub restricted) is neither stored nor published
+- Fine-grained PATs have an expiration date, so update the Secret when the token expires
+- Scheduled workflows are automatically disabled after 60 days of repository inactivity (in practice this is not an issue here, since chart update commits keep the repository active)
