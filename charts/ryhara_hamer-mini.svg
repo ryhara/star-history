@@ -13,8 +13,8 @@
 <text x="432.0" y="396" font-family="system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="11" fill="#898781" text-anchor="middle">Jul 26</text>
 <text x="616.0" y="396" font-family="system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="11" fill="#898781" text-anchor="middle">Aug 4</text>
 <text x="800.0" y="396" font-family="system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="11" fill="#898781" text-anchor="end">Aug 13</text>
-<path d="M 64.0 376.0 L 64.0 308.2 L 398.7 308.2 L 398.7 240.3 L 399.2 240.3 L 399.2 172.5 L 788.4 172.5 L 788.4 104.7 L 800.0 104.7 L 800.0 376.0 Z" fill="#2a78d6" fill-opacity="0.08" stroke="none"/>
-<path d="M 64.0 376.0 L 64.0 308.2 L 398.7 308.2 L 398.7 240.3 L 399.2 240.3 L 399.2 172.5 L 788.4 172.5 L 788.4 104.7 L 800.0 104.7" fill="none" stroke="#2a78d6" stroke-width="2" stroke-linejoin="round"/>
+<path d="M 64.0 376.0 L 64.0 308.2 L 398.7 308.2 L 398.7 240.3 L 399.2 240.3 L 399.2 172.5 L 788.3 172.5 L 788.3 104.7 L 800.0 104.7 L 800.0 376.0 Z" fill="#2a78d6" fill-opacity="0.08" stroke="none"/>
+<path d="M 64.0 376.0 L 64.0 308.2 L 398.7 308.2 L 398.7 240.3 L 399.2 240.3 L 399.2 172.5 L 788.3 172.5 L 788.3 104.7 L 800.0 104.7" fill="none" stroke="#2a78d6" stroke-width="2" stroke-linejoin="round"/>
 <circle cx="800.0" cy="104.7" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
 <text x="788.0" y="96.7" font-family="system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="13" font-weight="600" fill="#0b0b0b" text-anchor="end" style="font-variant-numeric: tabular-nums">4</text>
 </svg>
