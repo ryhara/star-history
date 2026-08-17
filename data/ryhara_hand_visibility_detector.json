@@ -1,7 +1,7 @@
 {
   "repo": "ryhara/hand_visibility_detector",
-  "updated": "2026-08-16T21:26:24Z",
-  "stars": 63,
+  "updated": "2026-08-17T21:31:46Z",
+  "stars": 77,
   "daily_cumulative": [
     [
       "2026-06-13",
@@ -58,6 +58,10 @@
     [
       "2026-08-16",
       63
+    ],
+    [
+      "2026-08-17",
+      77
     ]
   ]
 }
