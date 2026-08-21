@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="840" height="420" viewBox="0 0 840 420" role="img" aria-label="Star history of ryhara/N-HOT3D: 2 stars">
 <rect width="840" height="420" rx="8" fill="#1a1a19"/>
 <text x="64" y="30" font-family="system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="16" font-weight="600" fill="#ffffff">ryhara/N-HOT3D</text>
-<text x="64" y="48" font-family="system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="11" fill="#898781">GitHub stars · updated 2026-08-20 UTC</text>
+<text x="64" y="48" font-family="system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="11" fill="#898781">GitHub stars · updated 2026-08-21 UTC</text>
 <line x1="64" y1="376.0" x2="800" y2="376.0" stroke="#2c2c2a" stroke-width="1"/><text x="56" y="379.5" font-family="system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="11" fill="#898781" text-anchor="end" style="font-variant-numeric: tabular-nums">0</text>
 <line x1="64" y1="240.3" x2="800" y2="240.3" stroke="#2c2c2a" stroke-width="1"/><text x="56" y="243.8" font-family="system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="11" fill="#898781" text-anchor="end" style="font-variant-numeric: tabular-nums">1</text>
 <line x1="64" y1="104.7" x2="800" y2="104.7" stroke="#2c2c2a" stroke-width="1"/><text x="56" y="108.2" font-family="system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="11" fill="#898781" text-anchor="end" style="font-variant-numeric: tabular-nums">2</text>
@@ -10,9 +10,9 @@
 <text x="248.0" y="396" font-family="system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="11" fill="#898781" text-anchor="middle">Jul 4</text>
 <text x="432.0" y="396" font-family="system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="11" fill="#898781" text-anchor="middle">Jul 20</text>
 <text x="616.0" y="396" font-family="system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="11" fill="#898781" text-anchor="middle">Aug 5</text>
-<text x="800.0" y="396" font-family="system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="11" fill="#898781" text-anchor="end">Aug 20</text>
-<path d="M 64.0 376.0 L 64.0 240.3 L 135.2 240.3 L 135.2 104.7 L 800.0 104.7 L 800.0 376.0 Z" fill="#3987e5" fill-opacity="0.08" stroke="none"/>
-<path d="M 64.0 376.0 L 64.0 240.3 L 135.2 240.3 L 135.2 104.7 L 800.0 104.7" fill="none" stroke="#3987e5" stroke-width="2" stroke-linejoin="round"/>
+<text x="800.0" y="396" font-family="system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="11" fill="#898781" text-anchor="end">Aug 21</text>
+<path d="M 64.0 376.0 L 64.0 240.3 L 134.1 240.3 L 134.1 104.7 L 800.0 104.7 L 800.0 376.0 Z" fill="#3987e5" fill-opacity="0.08" stroke="none"/>
+<path d="M 64.0 376.0 L 64.0 240.3 L 134.1 240.3 L 134.1 104.7 L 800.0 104.7" fill="none" stroke="#3987e5" stroke-width="2" stroke-linejoin="round"/>
 <circle cx="800.0" cy="104.7" r="4" fill="#3987e5" stroke="#1a1a19" stroke-width="2"/>
 <text x="788.0" y="96.7" font-family="system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="13" font-weight="600" fill="#ffffff" text-anchor="end" style="font-variant-numeric: tabular-nums">2</text>
 </svg>
